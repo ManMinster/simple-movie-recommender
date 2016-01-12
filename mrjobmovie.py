@@ -12,7 +12,7 @@ class MovieRecommender(MRJob):
 	def load_movie_names(self):
 		self.movieNames = {}
 
-		with open("/Users/mannidepp/Documents/python_code/testpy/data/u.item") as f:
+		with open("data/u.item") as f:
 			for line in f:
 				fields = line.split("|")
 				self.movieNames[int(fields[0])] = fields[1]
@@ -20,7 +20,7 @@ class MovieRecommender(MRJob):
 	def load_items(self):
 		self.genres ={}
 
-		with open("/Users/mannidepp/Documents/python_code/testpy/data/u.item") as f:
+		with open("data/u.item") as f:
 			for line in f:
 				fields = line.split("|")
 				self.genres[int(fields[0])] = int(''.join(fields[5:23]))
