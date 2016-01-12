@@ -1,7 +1,7 @@
 ## simple-movie-recommender
 #### BUILD STATUS
 
-[![Build Status](https://travis-ci.org/ManMinster/travis-python-test.svg?branch=master)](https://travis-ci.org/ManMinster/travis-python-test)
+[![Build Status](https://travis-ci.org/ManMinster/simple-movie-recommender.svg?branch=master)](https://travis-ci.org/ManMinster/simple-movie-recommender)
 
 map-reduce jobs using the python MRJob module.
 
