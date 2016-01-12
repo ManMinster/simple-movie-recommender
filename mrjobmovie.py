@@ -2,7 +2,8 @@ from mrjob.job import MRJob
 from mrjob.step import MRStep
 from itertools import combinations
 from math import sqrt
-
+import os
+path = os.getcwd()
 
 class MovieRecommender(MRJob):
 
@@ -13,7 +14,7 @@ class MovieRecommender(MRJob):
 	def load_movie_names(self):
 		self.movieNames = {}
 
-		with open("data/u.item", "r") as f:
+		with open(path + "/data/u.item") as f:
 			for line in f:
 				fields = line.split("|")
 				self.movieNames[int(fields[0])] = fields[1]
@@ -21,7 +22,7 @@ class MovieRecommender(MRJob):
 	def load_items(self):
 		self.genres ={}
 
-		with open("data/u.item", "r") as f:
+		with open(path + "/data/u.item") as f:
 			for line in f:
 				fields = line.split("|")
 				self.genres[int(fields[0])] = int(''.join(fields[5:23]))
